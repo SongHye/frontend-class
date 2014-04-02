@@ -1,0 +1,69 @@
+<html>
+    <script>
+        var FirstStaticClass = (function(){
+            return{
+                printWholeNumsTo100 : function(){
+                    var num;
+                    
+                    for(num=1; num<=100; num++)
+                        console.log(num);
+                },
+     
+                printEvenNumsTo100 : function(){
+                    var num;
+
+                    for(num=0; num<=100; num+=2)
+                        console.log(num);
+                },
+                
+                printMultiplicationTable : function(){
+                    for(var i=1; i<10; i++)
+                        for(var j=1; j<10; j++)
+                            console.log("i * j = " + (i*j));
+                }
+            }
+        })();
+        
+        var SecondStaticClass = (function(){
+            var nums = [];
+            var result = 0;
+            
+            return{
+                input : function(){
+                    var num=0;
+                    var index=0;
+            
+                    while(true){
+                        if(num!=null){
+                            num = prompt("plz input the num : ","");
+                            nums[index]=num;
+                            index++;
+                        }else
+                            break;
+                    }
+                },
+                calculate : function(){
+                    for(var i=0; i<nums.length; i++){
+                        if(nums[i]===null)
+                            nums[i]=0;
+            
+                    result += parseInt(nums[i]);
+                    }
+                },
+                output : function(){
+                    alert(result);
+                }
+            }
+        })();
+            
+//        FirstStaticClass.printWholeNumsTo100();
+//        FirstStaticClass.printEvenNumsTo100();
+//        FirstStaticClass.printMultiplicationTable();
+//        
+//        SecondStaticClass.input();
+//        SecondStaticClass.calculate();
+//        SecondStaticClass.output();
+            
+            
+    </script>
+</html>

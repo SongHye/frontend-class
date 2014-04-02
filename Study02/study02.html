@@ -1,0 +1,39 @@
+<html>
+    <script>
+        
+        var nums = [];
+        var result = 0;
+        
+        input();
+        calculate();
+        output();
+        
+        function input() {
+            var num=0;
+            var index=0;
+            
+            while(true){
+                if(num!=null){
+                    num = prompt("plz input the num : ","");
+                    nums[index]=num;
+                    index++;
+                }else
+                    break;
+            }
+        };
+        
+        function calculate() {
+            for(var i=0; i<nums.length; i++){
+                if(nums[i]===null)
+                    nums[i]=0;
+            
+                result += parseInt(nums[i]);
+            }
+        };       
+        
+        function output() {            
+            alert(result);
+        };   
+                
+    </script>
+</html>
